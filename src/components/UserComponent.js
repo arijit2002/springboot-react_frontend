@@ -1,5 +1,5 @@
 import React from "react";
-import UsersService from '../services/UserService';
+import UserService from '../services/UserService';
 
 class UserComponent extends React.Component {
 
@@ -11,7 +11,7 @@ class UserComponent extends React.Component {
     }
 
     componentDidMount(){
-        UsersService.getUsers().then((rsponse) => {
+        UserService.getUsers().then((rsponse) => {
             this.setState({users:Response.data})
         });
     }
